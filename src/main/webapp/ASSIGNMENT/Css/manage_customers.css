@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
+
+:root {
+    --primary: #7CB342;
+    --primary-hover: #689f38;
+    --bg: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* Global Page Setup */
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.admin-container {
+    max-width: 1400px; /* High-res support */
+    margin: 40px auto;
+    padding: 0 60px;  /* Generous side padding to prevent cramped look */
+}
+
+/* Typography */
+.page-header {
+    margin-bottom: 35px;
+}
+
+.page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.page-header p {
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+/* Filter Bar - Premium Card Style */
+.filter-bar {
+    display: flex;
+    gap: 25px;
+    background: var(--white);
+    padding: 32px 40px; /* Roomy internal padding */
+    border-radius: 16px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.filter-group label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px; /* Space between label and input */
+    letter-spacing: 0.08em;
+}
+
+.filter-group input {
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fcfcfc;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+.filter-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(124, 179, 66, 0.1);
+}
+
+/* Table Container (The Main Card) */
+.table-container {
+    background: var(--white);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f1f5f9;
+    padding: 20px 32px; /* Extra horizontal padding for headers */
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 24px 32px; /* Deep horizontal padding for row content */
+    border-top: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+/* Content Styling */
+.patient-name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.05rem;
+    display: block;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.patient-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+code {
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: 'Inter', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Medical Records / Badges */
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge-health {
+    background: #f0fdf4;
+    color: #166534;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1px solid #dcfce7;
+}
+
+/* Emergency Contact Formatting */
+.contact-info span {
+    font-weight: 600;
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.contact-info small {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* Buttons & Actions */
+.filter-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-apply {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.3);
+}
+
+.btn-apply:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(124, 179, 66, 0.4);
+}
+
+.btn-clear {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.btn-clear:hover {
+    color: var(--text-main);
+}
+
+.btn-edit {
+    background: #f1f5f9;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    padding: 8px 16px;
+}
+
+.btn-edit:hover {
+    background: #e2e8f0;
+}
+
+.btn-delete {
+    color: #ef4444;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.btn-delete:hover {
+    color: #b91c1c;
+}

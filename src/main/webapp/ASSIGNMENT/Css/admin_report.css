@@ -1,0 +1,69 @@
+:root {
+    --admin-blue: #0f172a;
+    --accent-blue: #3b82f6;
+    --bg-light: #f1f5f9;
+}
+
+.report-container {
+    padding: 40px;
+    background: var(--bg-light);
+    min-height: 100vh;
+}
+
+.report-header { margin-bottom: 30px; }
+
+/* Filter Bar Styling */
+.filter-bar {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    align-items: flex-end;
+}
+
+.filter-group { display: flex; flex-direction: column; gap: 8px; }
+.filter-group input { 
+    padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; width: 200px; 
+}
+
+/* Table Styling */
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.report-table th {
+    background: var(--admin-blue);
+    color: white;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.report-table td { padding: 18px 20px; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; }
+
+/* Badges for Medical Conditions */
+.badge-container { display: flex; flex-wrap: wrap; gap: 5px; }
+.badge-health {
+    background: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.email-sub { font-size: 0.8rem; color: #64748b; }
+.em-phone { text-decoration: none; color: #ef4444; font-weight: bold; font-size: 0.85rem; }
+
+.btn-filter { background: var(--accent-blue); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
+.btn-reset { color: #64748b; text-decoration: none; font-size: 0.9rem; }

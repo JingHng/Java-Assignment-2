@@ -1,0 +1,119 @@
+/* submitFeedback.css */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --success-color: #27ae60;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.submit-wrapper {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.form-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.form-card h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.booking-summary {
+    background: #eef2f3;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-color);
+}
+
+.booking-summary p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Crucial for padding */
+}
+
+select:focus, textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    flex: 2;
+    background: var(--success-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #219150;
+    transform: translateY(-2px);
+}
+
+.btn-cancel {
+    flex: 1;
+    background: #95a5a6;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-cancel:hover {
+    background: #7f8c8d;
+}

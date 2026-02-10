@@ -1,0 +1,169 @@
+/* --- caregiver_details.css --- */
+
+/* General Layout */
+.caregiver-details-page {
+    padding: 20px 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #004c99;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    margin: 40px 0;
+}
+
+/* 1. Caregiver Profile Section */
+.caregiver-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #004c99;
+    flex-shrink: 0;
+}
+
+.header-info h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.specialty-tag {
+    display: inline-block;
+    background: #004c99;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.profile-bio h2 {
+    font-size: 1.6em;
+    margin-top: 15px;
+    color: #004c99;
+}
+
+/* 2. Services Provided Section */
+.services-provided-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service-list-container {
+    /* Apply Grid Display */
+    display: grid; 
+    
+    /* Set up 2 equal columns on larger screens */
+    grid-template-columns: repeat(2, 1fr); 
+    
+    /* Space between the service category boxes */
+    gap: 30px; 
+}
+
+/* Style for the individual service category box */
+.service-category-group {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.service-category-group h3 {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #004c99; /* Use primary color for separation */
+    margin-bottom: 10px;
+}
+
+/* Add Responsive Breakpoint for Mobile */
+@media (max-width: 600px) {
+    .service-list-container {
+        /* Stack into a single column on small screens */
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
+
+/* 3. Feedback Section */
+.feedback-section h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.feedback-item {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-weight: bold;
+    color: #ffc107; /* Star color */
+}
+
+.date {
+    color: #888;
+}
+
+.comments {
+    margin: 5px 0;
+    font-style: italic;
+    color: #444;
+}
+
+.reviewer {
+    text-align: right;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 4. Feedback Form Section (Assuming existing form-group styles) */
+/* Include or ensure basic form styles are present */
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .service-list-container {
+        grid-template-columns: 1fr;
+    }
+}

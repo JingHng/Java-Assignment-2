@@ -1,0 +1,122 @@
+/* ========== INDEX SPECIFIC STYLES ========== */
+
+/* Hero Section */
+.hero-wrapper {
+    padding: 100px 0 60px;
+    background: linear-gradient(180deg, rgba(245, 247, 245, 0) 0%, var(--off-white) 100%);
+    text-align: center;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(124, 179, 66, 0.1);
+    color: var(--primary-green-dark);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-body);
+}
+
+.hero-wrapper h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--dark-text);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-wrapper p {
+    font-family: var(--font-body);
+    color: var(--medium-gray);
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Featured Section (Split) */
+.split-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.split-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.split-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--dark-text);
+}
+
+/* Service Grid (Minimalist) */
+.services-section {
+    padding: 80px 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--light-gray);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.service-card:hover {
+    border-color: var(--primary-green-light);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+}
+
+/* Global Container */
+.main-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 968px) {
+    .split-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .hero-wrapper h1 { font-size: 2.5rem; }
+}

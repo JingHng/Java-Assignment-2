@@ -1,0 +1,282 @@
+/* adminBookingDetails.css - Exact SilverCare Green Theme Match */
+
+:root {
+    --primary-green: #7CB342;
+    --primary-green-dark: #689F38;
+    --primary-green-light: #9CCC65;
+    --accent-teal: #26A69A;
+    --dark-green: #558B2F;
+    --dark-text: #2d3436;
+    --medium-text: #636e72;
+    --light-text: #a8b3c1;
+    --light-bg: #f8f9fa;
+    --lighter-bg: #f5f7f5;
+    --border-color: #e9ecef;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+    --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+    --error-red: #dc2626;
+    --error-bg: #fef2f2;
+    --error-border: #fecaca;
+}
+
+/* Error Banner Styling */
+.error-banner {
+    background: var(--error-bg);
+    border: 2px solid var(--error-red);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+    animation: slideIn 0.3s ease-out;
+}
+
+.error-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.error-text {
+    color: var(--error-red);
+    font-weight: 700;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: var(--lighter-bg);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--dark-text);
+}
+
+.booking-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Back Link Styling */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    color: var(--dark-green);
+    transform: translateX(-5px);
+}
+
+/* Header Styling */
+h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--dark-text);
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -1.5px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark-text);
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Update the grid to have more horizontal space */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Increased gap for better breathing room */
+    margin-bottom: 20px;
+}
+
+/* Specific spacing for the Manage section inputs */
+.action-card .form-group {
+    margin-bottom: 25px;
+}
+
+.action-card .info-grid {
+    column-gap: 50px; 
+}
+
+#serviceDate, #startTime {
+    max-width: 220px; 
+    display: block;   
+}
+.form-control {
+    width: 100%;
+    padding: 14px 18px; 
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.btn-update {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* Card Layout */
+.info-card, .action-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px; /* Increased from 24px to 32px */
+}
+
+.action-card .info-grid .form-group {
+    margin-bottom: 0; 
+}
+
+.info-item {
+    padding: 16px;
+    background: var(--lighter-bg);
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+.info-item:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.info-label {
+    font-size: 13px;
+    color: var(--medium-text);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.info-value {
+    font-size: 17px;
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+/* Caregiver Badge */
+.badge-caregiver {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-green-light) 0%, var(--primary-green) 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.2);
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 16px;
+    color: var(--dark-text);
+    background-color: var(--white);
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(124, 179, 66, 0.1);
+}
+
+/* Read-Only Input */
+.form-control[readonly] {
+    background-color: var(--lighter-bg);
+    color: var(--medium-text);
+    border-style: solid;
+    cursor: not-allowed;
+}
+
+/* Update Button - Hero Style Match */
+.btn-update {
+    width: 100%;
+    padding: 18px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-md);
+    margin-top: 20px;
+}
+
+.btn-update:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(124, 179, 66, 0.4);
+}
+
+/* Alert Messages */
+.alert-success {
+    background: white;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+  version="5.0">
+
+    <display-name>SilverCare_Assignment2</display-name>
+
+    <welcome-file-list>
+        <welcome-file>ASSIGNMENT/index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Authorization Filters for Role-Based Access Control -->
+    <filter>
+        <filter-name>AuthorizationFilter</filter-name>
+        <filter-class>com.silvercare.filter.AuthorizationFilter</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>AuthorizationFilter</filter-name>
+        <url-pattern>/ASSIGNMENT/admin/*</url-pattern>
+        <url-pattern>/ASSIGNMENT/customer/*</url-pattern>
+        <url-pattern>/ASSIGNMENT/caregiver/*</url-pattern>
+        <url-pattern>/ASSIGNMENT/delivery/*</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>ServletAuthorizationFilter</filter-name>
+        <filter-class>com.silvercare.filter.ServletAuthorizationFilter</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>ServletAuthorizationFilter</filter-name>
+        <url-pattern>/AdminDashboard</url-pattern>
+        <url-pattern>/AdminManageServices</url-pattern>
+        <url-pattern>/AdminManageCustomers</url-pattern>
+        <url-pattern>/AdminManageCaregivers</url-pattern>
+        <url-pattern>/AdminManageBookings</url-pattern>
+        <url-pattern>/AdminManageFeedback</url-pattern>
+        <url-pattern>/AdminManageGST</url-pattern>
+        <url-pattern>/AdminReport</url-pattern>
+        <url-pattern>/ServiceAnalytics</url-pattern>
+        <url-pattern>/AdminEditUser</url-pattern>
+        <url-pattern>/Dashboard</url-pattern>
+        <url-pattern>/Checkout</url-pattern>
+        <url-pattern>/ViewCart</url-pattern>
+        <url-pattern>/ManageBookings</url-pattern>
+        <url-pattern>/ViewHistory</url-pattern>
+        <url-pattern>/AddToCartDB</url-pattern>
+        <url-pattern>/SubmitFeedback</url-pattern>
+        <url-pattern>/EditProfile</url-pattern>
+        <url-pattern>/ProcessEditProfile</url-pattern>
+        <url-pattern>/RemoveCartItem</url-pattern>
+        <url-pattern>/PaymentSuccess</url-pattern>
+        <url-pattern>/CheckAvailability</url-pattern>
+        <url-pattern>/EditBooking</url-pattern>
+        <url-pattern>/UpdateBooking</url-pattern>
+        <url-pattern>/MyFeedback</url-pattern>
+        <url-pattern>/ConfirmReceipt</url-pattern>
+        <url-pattern>/ClearHistory</url-pattern>
+        <url-pattern>/CaregiverDashboard</url-pattern>
+        <url-pattern>/CaregiverAction</url-pattern>
+    </filter-mapping>
+    
+    <servlet>
+        <servlet-name>ManageBookingsServlet</servlet-name>
+        <servlet-class>servlets.customer.ManageBookingsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManageBookingsServlet</servlet-name>
+        <url-pattern>/ManageBookings</url-pattern>
+    </servlet-mapping>
+
+</web-app>

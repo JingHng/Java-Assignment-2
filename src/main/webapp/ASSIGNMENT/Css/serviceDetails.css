@@ -1,0 +1,126 @@
+:root {
+    --primary: #7CB342;
+    --primary-dark: #558B2F;
+    --text-main: #333;
+    --text-muted: #666;
+    --bg-light: #f9fbf7;
+}
+
+.meal-info-alert {
+    padding: 12px;
+    background: #f0fdf4;
+    border-radius: 8px;
+    border-left: 4px solid #7CB342;
+    font-size: 0.9rem;
+    color: #166534;
+    margin-bottom: 15px;
+}
+
+body {
+    background-color: #fff;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+}
+
+.service-detail-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../Images/hero-bg.jpg'); /* Add a nice bg */
+    background-size: cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.breadcrumb a { color: #ddd; text-decoration: none; }
+.breadcrumb span { color: var(--primary); font-weight: bold; }
+
+.service-detail-container {
+    max-width: 1100px;
+    margin: -40px auto 40px;
+    padding: 0 20px;
+}
+
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.service-image-box img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 350px;
+}
+
+.category-badge {
+    background: #E8F5E9;
+    color: var(--primary-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.service-title { font-size: 32px; margin: 15px 0; }
+.service-price { font-size: 28px; color: var(--primary-dark); font-weight: 700; margin-bottom: 20px;}
+.unit { font-size: 16px; color: var(--text-muted); font-weight: 400; }
+
+.features-list { list-style: none; padding: 0; }
+.feature-item { margin-bottom: 10px; }
+.feature-icon { color: var(--primary); margin-right: 10px; font-weight: bold; }
+
+/* Booking Card */
+.booking-section { margin-top: 40px; }
+.booking-card {
+    background: var(--bg-light);
+    border: 1px solid #e1e8dc;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.special-option-box {
+    background: #fff;
+    padding: 20px;
+    border-left: 5px solid var(--primary);
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+.form-control, select, input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.btn-book {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-book:disabled { background: #ccc; cursor: not-allowed; }
+.btn-book:hover:not(:disabled) { background: var(--primary-dark); transform: translateY(-2px); }
+
+.login-prompt {
+    text-align: center;
+    border: 2px dashed var(--primary);
+    padding: 30px;
+    border-radius: 15px;
+}

@@ -1,0 +1,13 @@
+# Ignore Eclipse/build files
+.settings/
+.classpath
+.project
+build/
+target/
+.metadata/
+
+# Ignore temp files
+*.log
+*.tmp
+
+# Keep only the WAR file for deployment

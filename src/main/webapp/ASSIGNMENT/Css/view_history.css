@@ -1,0 +1,202 @@
+/* FORCE RESET */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f1f5f9 !important; /* Light grey-blue */
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Minimalist History Theme */
+.history-wrapper {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.history-header h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #1e272e;
+    letter-spacing: -0.02em;
+}
+
+.btn-back {
+    text-decoration: none;
+    color: #b2bec3;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.btn-back:hover { color: #1e272e; }
+
+/* History Cards */
+.history-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.date-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 25px;
+    border-right: 1px solid #f1f2f6;
+    min-width: 60px;
+}
+
+.date-tag .m { font-size: 0.75rem; text-transform: uppercase; color: #95a5a6; font-weight: 700; }
+.date-tag .d { font-size: 1.5rem; font-weight: 800; color: #1e272e; }
+
+.history-details { flex: 1; padding: 0 25px; }
+
+.history-top { display: flex; align-items: center; gap: 15px; margin-bottom: 8px; }
+
+.history-top h3 { font-size: 1.1rem; font-weight: 700; color: #1e272e; margin: 0; }
+
+/* Status Badges */
+.status-badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+
+.bg-completed { background: #f1f2f6; color: #636e72; }
+.bg-received { background: #e8f5e9; color: #27ae60; }
+.bg-cancelled { background: #fff5f5; color: #c0392b; text-decoration: line-through; }
+
+.history-meta { font-size: 0.85rem; color: #636e72; display: flex; gap: 20px; }
+
+/* Action Button */
+.btn-review {
+    background: #1e272e;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.btn-review:hover { opacity: 0.8; }
+
+.empty-state { text-align: center; padding: 100px 0; color: #b2bec3; }
+
+/* CONTAINER */
+.history-wrapper {
+    max-width: 1000px !important;
+    margin: 50px auto !important;
+    padding: 30px !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+    min-height: 600px !important;
+}
+
+/* HEADER */
+.history-header {
+    border-bottom: 2px solid #e2e8f0 !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 30px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.history-header h1 {
+    color: #0f172a !important;
+    font-size: 2rem !important;
+}
+
+/* CARDS */
+.history-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+}
+
+.history-card {
+    display: flex !important;
+    align-items: center !important;
+    padding: 20px !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+}
+
+/* DATE BOX */
+.date-tag {
+    text-align: center !important;
+    padding-right: 20px !important;
+    border-right: 2px solid #f1f5f9 !important;
+    min-width: 70px !important;
+}
+
+.date-tag .m {
+    display: block !important;
+    color: #7CB342 !important;
+    font-weight: bold !important;
+    font-size: 0.8rem !important;
+}
+
+.date-tag .d {
+    display: block !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+}
+
+/* TEXT DETAILS */
+.history-details {
+    flex: 1 !important;
+    padding-left: 20px !important;
+}
+
+.history-top h3 {
+    margin: 0 !important;
+    color: #1e293b !important;
+}
+
+.history-meta {
+    font-size: 0.9rem !important;
+    color: #64748b !important;
+    display: flex !important;
+    gap: 15px !important;
+}
+
+/* STATUS BADGE */
+.status-badge {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    font-size: 0.75rem !important;
+    font-weight: bold !important;
+}
+
+/* BUTTON */
+.btn-review {
+    background-color: #7CB342 !important;
+    color: white !important;
+    padding: 10px 15px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+}

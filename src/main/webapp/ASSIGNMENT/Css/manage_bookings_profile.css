@@ -1,0 +1,257 @@
+/* Core Palette & Font */
+:root {
+    --primary-green: #7CB342;
+    --primary-dark: #0f172a;
+    --slate-500: #64748b;
+    --slate-100: #f1f5f9;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --error-red: #dc2626;
+    --error-bg: #fef2f2;
+    --error-border: #fecaca;
+    --success-green: #16a34a;
+    --success-bg: #f0fdf4;
+    --success-border: #bbf7d0;
+}
+
+/* Error Message Banner */
+.error-message {
+    background: var(--error-bg);
+    border: 2px solid var(--error-red);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+    animation: slideIn 0.3s ease-out;
+}
+
+.error-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.error-text {
+    color: var(--error-red);
+    font-weight: 700;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+/* Success Message Banner */
+.success-message {
+    background: var(--success-bg);
+    border: 2px solid var(--success-green);
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.1);
+    animation: slideIn 0.3s ease-out;
+}
+
+.success-icon {
+    color: var(--success-green);
+    font-weight: 900;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.success-text {
+    color: var(--success-green);
+    font-weight: 600;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Table Action Button Grouping */
+.action-buttons {
+    display: flex;
+    gap: 8px; /* Space between Edit and Cancel */
+    justify-content: center;
+}
+
+.btn-action {
+    flex: 1; /* Makes them equal width */
+    min-width: 80px;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+/* Caregiver Tag Styling */
+.assigning-tag {
+    color: #0284c7;
+    font-style: italic;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.text-muted {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* Ensure table looks like dashboard cards */
+.bookings-table-container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    border: 1px solid #f1f5f9;
+    overflow: hidden;
+}
+
+.bookings-table th {
+    background: #f8fafc;
+    color: #64748b;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 16px;
+}
+
+.amount-cell {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+body {
+    background-color: #f8fafc; /* Matches dashboard-wrapper bg */
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+.bookings-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Hero Section Styles */
+.bookings-hero {
+    background: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--slate-100);
+    margin-bottom: 30px;
+}
+
+.bookings-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+.bookings-hero p {
+    color: var(--slate-500);
+    margin-top: 8px;
+}
+
+/* Modern Table Design */
+.bookings-table-container {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid var(--slate-100);
+}
+
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.bookings-table th {
+    background: #f8fafc;
+    padding: 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--slate-500);
+    letter-spacing: 0.025em;
+    border-bottom: 1px solid var(--slate-100);
+}
+
+.bookings-table td {
+    padding: 20px 16px;
+    border-bottom: 1px solid var(--slate-100);
+    font-size: 0.95rem;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-confirmed { background: #dcfce7; color: #166534; }
+.status-pending { background: #fef9c3; color: #854d0e; }
+.status-cancelled { background: #fee2e2; color: #991b1b; }
+
+/* Buttons */
+.btn-action {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.btn-edit {
+    background-color: var(--white);
+    color: var(--primary-dark);
+    border: 1px solid #e2e8f0;
+}
+
+.btn-edit:hover {
+    background-color: var(--slate-100);
+}
+
+.btn-cancel {
+    background-color: #fff1f2;
+    color: #e11d48;
+    margin-left: 8px;
+}
+
+.btn-cancel:hover {
+    background-color: #ffe4e6;
+}
+
+.btn-back {
+    color: var(--slate-500);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.btn-back:hover {
+    color: var(--primary-green);
+}

@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
+
+:root {
+    --primary: #7CB342;
+    --primary-hover: #689f38;
+    --bg: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* Styling for the Admin Reply Box */
+.admin-reply {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8fafc; /* Light blue-grey background */
+    border-left: 4px solid #7CB342; /* SilverCare signature green */
+    border-radius: 4px;
+}
+
+.reply-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.reply-icon {
+    font-size: 1.1rem;
+}
+
+.reply-text {
+    margin: 0;
+    font-style: italic;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+.feedback-card {
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s;
+    /* Ensure cards expand for content */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    margin: 0;
+}
+
+/* Hero Section */
+.feedback-hero {
+    background: var(--white);
+    padding: 60px 60px 40px 60px; /* Aligned with container padding */
+    border-bottom: 1px solid var(--border);
+}
+
+.feedback-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.feedback-hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.feedback-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 60px; /* Generous side padding */
+}
+
+/* Section Headers */
+.section-header {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+/* Bookings Ready for Review (Horizontal Cards) */
+.review-eligible-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.eligible-card {
+    background: var(--white);
+    padding: 24px 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.eligible-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.eligible-date {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* Submitted Feedback Grid */
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.feedback-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.service-name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.rating-display {
+    text-align: right;
+}
+
+.stars {
+    color: #FBC02D; /* Premium Gold */
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.rating-text {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.feedback-content {
+    font-style: italic;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.feedback-meta {
+    padding-top: 15px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Buttons */
+.btn-review {
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.btn-review:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-view-service {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* Empty State Styling */
+.empty-state {
+    text-align: center;
+    padding: 60px 40px;
+    background: #fff;
+    border-radius: 20px;
+    border: 2px dashed var(--border);
+}
+
+.empty-icon { font-size: 3rem; margin-bottom: 15px; }
+
+.section-divider {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 50px 0;
+}

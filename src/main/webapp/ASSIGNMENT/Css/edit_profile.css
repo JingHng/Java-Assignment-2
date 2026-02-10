@@ -1,0 +1,169 @@
+/* -- Premium UI Refresh by Wan Jing Hng -- */
+:root {
+    --primary: #10b981;
+    --primary-dark: #059669;
+    --slate-800: #1e293b;
+    --slate-600: #475569;
+    --slate-200: #e2e8f0;
+    --emerald-50: #ecfdf5;
+}
+
+.profile-main {
+    background: #f8fafc;
+    padding: 60px 5%;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.profile-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.02);
+}
+
+.profile-header {
+    margin-bottom: 45px;
+    border-left: 6px solid var(--primary);
+    padding-left: 25px;
+}
+
+.profile-header h1 {
+    font-size: 2.25rem;
+    color: var(--slate-800);
+    margin: 0;
+}
+
+.icon-main { margin-right: 10px; }
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.form-section h3 {
+    font-size: 1.3rem;
+    color: var(--slate-800);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-row { display: flex; gap: 20px; }
+.form-group { flex: 1; margin-bottom: 22px; display: flex; flex-direction: column; }
+
+.form-group label, .label-heading {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--slate-600);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.form-group input, .form-group textarea {
+    padding: 14px;
+    border: 2px solid #f1f5f9;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.readonly-field { background: #f1f5f9 !important; color: #94a3b8; cursor: not-allowed; }
+
+/* Medical Area */
+.condition-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--slate-200);
+}
+
+.cb-item {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* THE BIG TEXTAREA */
+.other-input-box {
+    display: none;
+    width: 100%;
+    margin-top: 25px;
+    padding: 18px;
+    border: 2px solid var(--primary) !important;
+    border-radius: 15px;
+    background: var(--emerald-50);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.emergency-box {
+    margin-top: 30px;
+    padding: 25px;
+    background: #fff1f2;
+    border: 1px solid #fee2e2;
+    border-radius: 15px;
+}
+
+/* Actions */
+.form-actions {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 2px solid #f1f5f9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-save {
+    background: var(--primary);
+    color: white;
+    padding: 16px 45px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+    transition: 0.3s;
+}
+
+.btn-save:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.4);
+}
+
+.btn-cancel {
+    text-decoration: none;
+    color: var(--slate-600);
+    font-weight: 600;
+}
+
+.btn-cancel:hover { color: #e11d48; }
+
+@media (max-width: 900px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .profile-container { padding: 30px; }
+}

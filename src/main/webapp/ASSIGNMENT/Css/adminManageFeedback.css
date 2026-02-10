@@ -1,0 +1,208 @@
+/* --- Root Variables for easy tweaking --- */
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-main: #fcfcfd;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #f3f4f6;
+    --star-gold: #fbbf24;
+    --reply-bg: #f9fafb;
+}
+
+body {
+    background-color: var(--bg-main);
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text-main);
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+/* --- Sophisticated Header --- */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-left h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+.header-left p {
+    color: var(--text-muted);
+    margin: 4px 0 0;
+}
+
+.filter-select {
+    appearance: none;
+    padding: 10px 40px 10px 16px;
+    background: var(--card-bg);
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* --- The Modern Grid --- */
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 30px;
+}
+
+/* --- The Redesigned Card --- */
+.feedback-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.star-filled { color: var(--star-gold); font-size: 1.1rem; }
+.star-empty { color: #e5e7eb; font-size: 1.1rem; }
+.date-text { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+/* --- Speech Bubble Styling --- */
+.comment-bubble {
+    position: relative;
+    background: #f3f4f6;
+    padding: 16px;
+    border-radius: 12px;
+    border-bottom-left-radius: 2px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+.client-info {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding-left: 4px;
+    border-left: 3px solid var(--primary);
+    margin-bottom: 24px;
+}
+
+/* --- Minimalist Reply Section --- */
+.reply-container {
+    margin-top: auto;
+    background: var(--reply-bg);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.previous-reply {
+    margin-bottom: 12px;
+}
+
+.reply-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.previous-reply p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.reply-form textarea {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.reply-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.btn-reply {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-reply:hover { background: var(--primary-hover); }
+
+/* --- Footer & Clean Delete --- */
+.card-footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.id-badge {
+    background: #f3f4f6;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-delete:hover { color: #ef4444; text-decoration: underline; }
+
+/* --- Alerts --- */
+.alert {
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+.alert-success { background: #ecfdf5; color: #065f46; border: 1px solid #d1fae5; }

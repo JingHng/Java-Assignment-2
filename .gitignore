@@ -1,0 +1,24 @@
+# Eclipse
+.settings/
+.classpath
+.project
+.metadata/
+
+# Build outputs
+build/
+target/
+bin/
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep WAR file for deployment
+!Assignment2_J2EE.war

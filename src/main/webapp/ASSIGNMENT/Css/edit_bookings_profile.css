@@ -1,0 +1,213 @@
+:root {
+    --primary: #0284c7;
+    --primary-hover: #0369a1;
+    --bg-body: #f1f5f9;
+    --text-dark: #0f172a;
+    --text-light: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+/* Hero Section */
+.edit-hero {
+    background: linear-gradient(135deg, #0284c7 0%, #075985 100%);
+    padding: 60px 20px 100px;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.ref-text {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.ref-text span {
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Layout Container */
+.edit-container {
+    max-width: 1100px;
+    margin: -60px auto 60px;
+    padding: 0 20px;
+}
+
+.btn-back {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.btn-back:hover {
+    opacity: 1;
+}
+
+/* The Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch; /* Makes both cards equal height */
+}
+
+/* Card Styling */
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+}
+
+.card-header .icon { font-size: 1.5rem; }
+.card-header h3 { margin: 0; font-size: 1.25rem; font-weight: 700; }
+
+/* Summary List */
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.summary-item label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.summary-item .value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.highlight { color: var(--primary); }
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #f8fafc;
+}
+
+/* Buttons */
+.btn-check, .btn-update, .btn-support {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-check { background: var(--primary); color: white; }
+.btn-check:hover { background: var(--primary-hover); transform: translateY(-2px); }
+
+.btn-update:disabled { background: #cbd5e1; cursor: not-allowed; }
+.btn-update:not(:disabled) { background: #059669; color: white; }
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.status-confirmed { background: #dcfce7; color: #166534; }
+.status-pending { background: #fef9c3; color: #854d0e; }
+/* Blue theme for delivery statuses */
+[class*="status-food-"] { background: #e0f2fe; color: #0369a1; }
+
+/* Time Slots */
+.time-slots-section { margin-top: 24px; }
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.time-slot-btn {
+    padding: 12px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.time-slot-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Meal Notice */
+.meal-notice-card {
+    text-align: center;
+    background: #f0f9ff;
+}
+
+.notice-icon { font-size: 4rem; margin-bottom: 15px; }
+.sub-text { color: var(--text-light); font-size: 0.9rem; margin-top: 10px; }
+.btn-support { background: var(--text-dark); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+
+@media (max-width: 768px) {
+    .info-grid { grid-template-columns: 1fr; }
+}

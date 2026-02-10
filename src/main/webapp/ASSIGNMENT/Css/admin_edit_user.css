@@ -1,0 +1,155 @@
+/* Style: Short & Punchy 
+   Description: Premium SilverCare Green Theme for User Editing
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
+
+:root {
+    --primary: #7CB342;
+    --primary-hover: #689f38;
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --medical-bg: #f0fdf4; /* Subtle green for medical area */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: var(--font-body);
+    margin: 0;
+    color: var(--text);
+}
+
+.edit-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.admin-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px; /* Matching your modal rounding */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.card-header {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 35px 45px;
+}
+
+.card-header h2 { 
+    margin: 0; 
+    font-family: var(--font-heading);
+    font-size: 26px; 
+    font-weight: 800;
+}
+
+.card-header p { 
+    margin: 8px 0 0; 
+    opacity: 0.9; 
+    font-size: 15px; 
+}
+
+.edit-form { padding: 45px; }
+
+.section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.input-group { display: flex; flex-direction: column; }
+
+.input-group label { 
+    font-weight: 700; 
+    font-size: 13px; 
+    margin-bottom: 10px; 
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.input-group input, 
+.input-group textarea {
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+    background: #fcfcfc;
+    font-family: var(--font-body);
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(124, 179, 66, 0.1);
+}
+
+.full-width { grid-column: span 2; }
+
+/* Medical Area Highlights */
+.medical-area {
+    background: var(--medical-bg) !important;
+    border-color: #dcfce7 !important;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.btn-update {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font-body);
+    box-shadow: 0 4px 14px rgba(124, 179, 66, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-update:hover { 
+    background: var(--primary-hover); 
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(124, 179, 66, 0.4);
+}
+
+.btn-cancel {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.btn-cancel:hover {
+    color: var(--text);
+}
