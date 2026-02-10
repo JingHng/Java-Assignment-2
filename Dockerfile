@@ -14,6 +14,9 @@ RUN rm -rf /usr/local/tomee/webapps/ROOT
 # Copy the WAR file from the build stage
 COPY --from=build /app/target/Assignment2_J2EE.war /usr/local/tomee/webapps/ROOT.war
 
+# Configure TomEE to listen on all interfaces (0.0.0.0)
+RUN sed -i 's/Connector port="8080"/Connector address="0.0.0.0" port="8080"/' /usr/local/tomee/conf/server.xml
+
 # Expose port 8080
 EXPOSE 8080
 
